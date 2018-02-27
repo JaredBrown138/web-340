@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2.4</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheed" href="./styles/styles.css">
+    <!-- 
+        I would add Styling in a seperate css file but I don't feel like messing with the
+        CSP to load it from localhost.
+    -->    
+    <style>
+        .card{
+            margin: 30px 100px 0 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <%= firstName + " " + lastName %>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Address:</h5>
+            <p class="card-text"><%= address %></p>
+            <a href="#" class="btn btn-primary">Contact <%= firstName %></a>
+        </div>
+    </div>
+</body>    
