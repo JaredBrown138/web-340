@@ -21,7 +21,8 @@ app.get("/", function(req, res){
     res.render("index", {
         firstName: "Sammuel",
         lastName: "Greene",
-        address: "245 Oak Ave. Small Town, PA 12043"
+        address: "245 Oak Ave. Small Town, PA 12043",
+        email: "samgreene@eggsandham.com"
     });
 });
 
