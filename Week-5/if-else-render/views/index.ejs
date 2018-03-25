@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5.2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">  
+    <style>
+       
+    </style>
+</head>
+<body>
+        <div role="main" class="container">
+            <br/><br/>
+            <h2>Name List</h2>
+            
+            <% if (nameArray.length > 0) { %>
+                <% for (var i = 0; i < nameArray.length; i++) { %>
+                    <div class="alert alert-success" role="alert"><strong><%= nameArray[i] %></strong></div>
+                <% } %>    
+            <% } %>    
+
+        </div>
+</body>
