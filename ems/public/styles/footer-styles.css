@@ -1,0 +1,24 @@
+.footer-container{
+    bottom: 0px;
+    height: 70px;
+    width: 100%;
+    background-color: #1F1F1F;
+    color: white;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.footer-left{
+    text-align: left;
+    top: 5px;
+    left: 25px;
+}
+.footer-right{
+    text-align: right;
+    right: 25px;
+    top: 5px;
+}
+.footer-container > p{
+    text-align: center;
+    line-height: 70px;
+}
