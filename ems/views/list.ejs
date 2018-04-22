@@ -12,6 +12,7 @@
                             <tr>
                                 <th>First Name</th>
                                 <th>Last Name</th>
+                                <th>View Records With Same Last Name</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -23,6 +24,7 @@
                                     <td>
                                         <%=entry.lastName%>
                                     </td>
+                                    <td><a href="/view/<%= entry.lastName %>">Search</a></td>
                                 </tr>
                         </tbody>
                         <%})%>

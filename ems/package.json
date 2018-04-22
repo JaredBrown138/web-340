@@ -2,6 +2,12 @@
     "name": "ems",
     "author": "Jared Brown",
     "private": true,
+    "scripts": {
+        "start": "node app.js"
+    },
+    "engines": {
+        "node": "v9.11.0"
+    },
     "dependencies": {
         "body-parser": "^1.18.2",
         "cookie-parser": "^1.4.3",

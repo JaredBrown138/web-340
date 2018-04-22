@@ -36,6 +36,7 @@ db.once("open", function() {
 
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
+app.set("port", process.env.PORT || 8080);
 
 app.use(logger("short"));
 app.use(helmet.xssFilter());
@@ -78,6 +79,24 @@ app.get("/list", function(req, res){
     });
 });
 
+app.get("/view/:queryName", function (request, response) {
+    var queryName = request.params.queryName;
+    Employee.find({'lastName': queryName}, function(error, employees) {
+        if (error) throw error;
+        if (employees.length > 0) {
+            response.render("view", {
+                title: "Employee Records",
+                employee: employees,
+                styles: ""
+            })
+        }else{
+            response.redirect("/list")
+        }
+    });
+    
+
+});
+
 app.post("/process", function(req, res) {
     if (!req.body.txtFirstName || !req.body.txtLastName) {
         res.status(400).send("Entries must have a name");
@@ -96,6 +115,6 @@ app.post("/process", function(req, res) {
     res.redirect("/list");
  });
 
-http.createServer(app).listen(PORT, function(){
-    console.log("Application started on port " + PORT);
+http.createServer(app).listen(app.get("port"), function(){
+    console.log("Application started on port " + app.get("port"));
 })
